@@ -50,7 +50,7 @@ static faultd_client_t* faultd_client__ = NULL;
 static faultd_info_t faultd_info__;
 static int localfd__ = -1; 
 
-inline int signal_backtrace__(void** buffer, int size, ucontext_t* context,
+static inline int signal_backtrace__(void** buffer, int size, ucontext_t* context,
                               int distance)
 {
 #define IP_STACK_FRAME_NUMBER 3
